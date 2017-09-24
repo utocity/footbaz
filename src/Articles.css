@@ -1,0 +1,17 @@
+.Articles {
+  line-height: 20px;
+}
+
+.ArticleGrid {
+  margin-top: 20px;
+}
+
+.title {
+  color: #333;
+}
+
+.title:visited {
+  color: #969696;
+}
+
+
