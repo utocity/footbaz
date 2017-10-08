@@ -8,10 +8,63 @@
 }
 
 .App-header {
-  background-color: #00343F;
-  height: 60px;
-  padding: 20px;
+  background-color: #4682B4;
+  min-height: 60px;
+  padding: 0;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header-panel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.App-left-sidebar-button {
+  background: url('./three-horizental-bars.svg') center center no-repeat;
+  height: 32px;
+  width: 32px;
+  margin-left: 5px;
+  border: none;
+}
+
+.App-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.App-right-sidebar-button {
+  display: inline-block;
+  width: 32px;
+  width: 32px;
+}
+
+@media (min-width: 767px) {
+  .App-header-panel {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .App-header-panel {
+    width: 768px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .App-header-panel {
+    width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App-header-panel {
+    width: 1200px;
+  }
 }
 
 .App-intro {
@@ -21,4 +74,71 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.left-sidenav {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  willchange: opacity;
+}
+
+.left-sidenav--visible {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.left-sidenav__content {
+  background-color: #FAFAFA;
+  width: 80%;
+  max-width: 310px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  will-change: transform;
+  left: -101%;
+  transition: left 0.233s cubic-bezier(0,0,0.21,1);
+}
+
+.left-sidenav__content--visible {
+  left: 0;
+}
+
+.left-sidenav__header {
+  height:  145px;
+  width: 100%;
+  background: url('./app_left_sidenav_header.jpg');
+  position: relative;
+}
+
+.left-sidenav__title {
+  font-size: 16px;
+  line-height: 1;
+  color: #FEFEFE;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.sidenav__shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: block;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.233s cubic-bezier(0,0,0.21,1);
+}
+
+.sidenav__shadow--visible {
+  opacity: 0.7;
 }
