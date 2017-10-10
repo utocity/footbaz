@@ -86,11 +86,13 @@
   pointer-events: none;
   opacity: 0;
   willchange: opacity;
+  transition: opacity 0s linear 0.2s;
 }
 
 .left-sidenav--visible {
   pointer-events: auto;
   opacity: 1;
+  transition: opacity 0s linear 0s;
 }
 
 .left-sidenav__content {
@@ -101,9 +103,9 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-  will-change: transform;
+  will-change: left;
   left: -101%;
-  transition: left 0.233s cubic-bezier(0,0,0.21,1);
+  transition: left 0.2s cubic-bezier(0,0,0.21,1);
 }
 
 .left-sidenav__content--visible {
@@ -136,7 +138,7 @@
   display: block;
   opacity: 0;
   will-change: opacity;
-  transition: opacity 0.233s cubic-bezier(0,0,0.21,1);
+  transition: opacity 0.2s cubic-bezier(0,0,0.21,1);
 }
 
 .sidenav__shadow--visible {
